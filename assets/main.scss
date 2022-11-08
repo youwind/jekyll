@@ -2,16 +2,13 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-.bg-image{
-  background-image: url("/assets/bg.jpeg");
-  background-size: cover;
-  background-repeat: space;
-}
-
 nav{
   font-family: 'Oswald', sans-serif;
   font-size: 1.2em;
+  background: #333;
+  margin-bottom: 1em;
 }
+
 .navbar-nav{
   .nav-item{
     a{
