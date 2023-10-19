@@ -175,6 +175,12 @@ body {
   background-position: bottom;
   background-size: cover;
 }
+.aboutus-background {
+  background-image: url("/assets/PeopleOffice.jpg");
+  height: 700px;
+  background-position: bottom;
+  background-size: cover;
+}
 
 /*! Headings & fonts */
 p {
@@ -243,6 +249,12 @@ h5{
   font-weight: 600;
   line-height: 2.6875rem;
 }
+.semibold_24px{
+  color: #2250ff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.6875rem;
+}
 .regular_24px{
   color: black;
   font-size: 1.5rem;
@@ -293,6 +305,9 @@ h5{
 
 .grayback {
   background-color: #F7F8FB;
+}
+.mediumgrayback {
+  background-color: #d5d9e5;
 }
 .darkgrayback {
   background-color: #b3b8c7;
