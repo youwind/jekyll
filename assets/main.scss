@@ -87,6 +87,24 @@ body {
     color: white;
   }
 }
+.youwind_button_white{
+  color: #0050ff;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 50rem;
+  padding: 10px 40px 10px 40px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  min-width: 190px;
+  &:hover{
+    font-weight: 500;
+    background-color:  white;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    color: #0050ff;
+  }
+}
 
 .youwind_login {
   color: #2250ff;
@@ -151,6 +169,12 @@ body {
   background-position: top right;
   background-repeat: no-repeat;
 }
+.faq-background {
+  background-image: url("/assets/FAQCover.jpg");
+  height: 700px;
+  background-position: bottom;
+  background-size: cover;
+}
 
 /*! Headings & fonts */
 p {
@@ -213,6 +237,12 @@ h5{
   font-size: 3rem;
   font-weight: 600;
 }
+.semibold_36px{
+  color: #2250ff;
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 2.6875rem;
+}
 .regular_24px{
   color: black;
   font-size: 1.5rem;
@@ -221,6 +251,12 @@ h5{
 }
 .bold_30px{
   font-size: 1.875rem;
+  font-weight: 700;
+}
+.bold_24px{
+  color: #030d62;
+  font-size: 1.5rem;
+  line-height: 1,8125;
   font-weight: 700;
 }
 .bold_14px{
@@ -253,6 +289,9 @@ h5{
 }
 .darkgrayback {
   background-color: #b3b8c7;
+}
+.darkblueback {
+  background-color: #030d62;
 }
 
 .blueback {
