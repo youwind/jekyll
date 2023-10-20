@@ -175,6 +175,13 @@ body {
   background-position: bottom;
   background-size: cover;
 }
+.workshops-background {
+  background:linear-gradient(0deg, rgba(56, 56, 132, 0.8), rgba(56, 56, 132, 0.8)), url("/assets/7_Consultancy.jpg");
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  
+}
 .aboutus-background {
   background-image: url("/assets/PeopleOffice.jpg");
   height: 700px;
