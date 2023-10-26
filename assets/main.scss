@@ -50,6 +50,7 @@ body {
     padding: none !important;
   }
 }
+
 .youwind_button{
   color: white;
   font-weight: 400;
@@ -103,6 +104,26 @@ body {
     -ms-transform: scale(1.01);
     transform: scale(1.01);
     color: #0050ff;
+  }
+}
+.youwind_button_white_outline{
+  color: white;
+  font-weight: 400;
+  border-color: white;
+  background-color: transparent;
+  border-width: 3px;
+  border-radius: 50rem;
+  padding: 10px 40px 10px 40px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  min-width: 210px;
+  &:hover{
+    font-weight: 600;
+    background-color:  white;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    color: #030d62;
   }
 }
 
