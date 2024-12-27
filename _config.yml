@@ -17,8 +17,8 @@ title: Youwind
 email: info@youwindrenewables.com
 description: >- # this means to ignore newlines until "baseurl:"
   Youwind renewables
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://youwind.github.io/"
+baseurl: "/jekyll" # the subpath of your site, e.g. /blog
+url: "http://youwind.github.io/jekyll"
 
 # Build settings
 markdown: kramdown
