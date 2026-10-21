@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand bg-white sticky-top py-2 site-navbar" data-bs-theme="light" aria-label="Main navigation">
+<nav class="navbar navbar-expand bg-white sticky-top py-2 border-bottom shadow-sm" data-bs-theme="light" aria-label="Main navigation">
   <div class="container-fluid flex-wrap md:flex-nowrap gap-3">
     <a class="navbar-brand flex-shrink-0 me-0" rel="author" href="{{ "/" | relative_url }}">
       <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Youwind Renewables" class="img-fluid bg-primary rounded p-3" width="180"/>
@@ -6,25 +6,25 @@
     <div class="nav-overflow" data-bs-toggle="nav-overflow">
       <ul class="nav navbar-nav justify-content-center">
         <li class="nav-item">
-          <a href="{{ '/solutions' | relative_url }}" class="nav-link text-uppercase text-nowrap">Solutions</a>
+          <a href="{{ '/solutions' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/solutions' %} active fw-semibold{% endif %}"{% if page.url contains '/solutions' %} aria-current="page"{% endif %}>Solutions</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/offshore' | relative_url }}" class="nav-link text-uppercase text-nowrap">Offshore</a>
+          <a href="{{ '/offshore' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/offshore' %} active fw-semibold{% endif %}"{% if page.url contains '/offshore' %} aria-current="page"{% endif %}>Offshore</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/onshore' | relative_url }}" class="nav-link text-uppercase text-nowrap">Onshore</a>
+          <a href="{{ '/onshore' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/onshore' %} active fw-semibold{% endif %}"{% if page.url contains '/onshore' %} aria-current="page"{% endif %}>Onshore</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/bess' | relative_url }}" class="nav-link text-uppercase text-nowrap">BESS</a>
+          <a href="{{ '/bess' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/bess' %} active fw-semibold{% endif %}"{% if page.url contains '/bess' %} aria-current="page"{% endif %}>BESS</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/clients' | relative_url }}" class="nav-link text-uppercase text-nowrap">Clients</a>
+          <a href="{{ '/clients' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/clients' %} active fw-semibold{% endif %}"{% if page.url contains '/clients' %} aria-current="page"{% endif %}>Clients</a>
         </li>
         <li class="nav-item">
           <a href="https://youwindrenewables.com/knowledge-center/" class="nav-link text-uppercase text-nowrap">Knowledge Center</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/about.html' | relative_url }}" class="nav-link text-uppercase text-nowrap">About us</a>
+          <a href="{{ '/about.html' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/about' %} active fw-semibold{% endif %}"{% if page.url contains '/about' %} aria-current="page"{% endif %}>About us</a>
         </li>
       </ul>
     </div>

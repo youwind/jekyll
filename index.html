@@ -1,458 +1,1154 @@
 ---
 layout: default
-stylesheet: /assets/landing.css
 ---
 
-<section class="home-hero" aria-labelledby="home-hero-title">
-  <div class="home-hero-copy">
-    <h1 id="home-hero-title">Clarity in Motion</h1>
-    <p>We empower Wind Offshore &amp; Onshore Developers and energy professionals to make the right decisions through an integrated platform, a seamless and collaborative experience, expert-backed guidance, and validated bankable outcomes.</p>
-    <a href="{{ '/solutions.html' | relative_url }}" class="home-hero-link">
-      <span>Explore our idea of wind development</span>
-      <svg width="12" height="10" viewBox="0 0 12 10" fill="currentColor" aria-hidden="true">
-        <path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"/>
-      </svg>
-    </a>
+<section aria-labelledby="home-hero-title" class="container py-12">
+  <div class="row g-7 align-items-center">
+    <div class="col-12 md:col-4">
+      <h1 class="fs-4xl fw-light fg-primary mb-5" id="home-hero-title">
+        Clarity in Motion
+      </h1>
+      <p>
+        We empower Wind Offshore &amp; Onshore Developers and energy
+        professionals to make the right decisions through an integrated
+        platform, a seamless and collaborative experience, expert-backed
+        guidance, and validated bankable outcomes.
+      </p>
+      <a
+        class="btn-outline theme-primary"
+        href="{{ '/solutions.html' | relative_url }}"
+      >
+        <span>Explore our idea of wind development</span>
+        <svg
+          aria-hidden="true"
+          fill="currentColor"
+          height="10"
+          viewbox="0 0 12 10"
+          width="12"
+        >
+          <path
+            d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+    <div class="col-12 md:col-8">
+      <video
+        aria-label="Youwind wind development platform overview"
+        class="w-100 rounded"
+        controls=""
+        id="hero-video"
+        loop=""
+        muted=""
+        playsinline=""
+        preload="metadata"
+      >
+        <source
+          src="https://youwindrenewables.com/wp-content/uploads/2025/05/00_HOMEPAGE_Hero-Video_200525-1.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support embedded video.
+        <a
+          href="https://youwindrenewables.com/wp-content/uploads/2025/05/00_HOMEPAGE_Hero-Video_200525-1.mp4"
+          >Watch the Youwind overview.</a
+        >
+      </video>
+    </div>
   </div>
-  <video class="home-hero-video" playsinline muted loop controls preload="metadata" aria-label="Youwind wind development platform overview">
-    <source src="https://youwindrenewables.com/wp-content/uploads/2025/05/00_HOMEPAGE_Hero-Video_200525-1.mp4" type="video/mp4">
-    Your browser does not support embedded video.
-    <a href="https://youwindrenewables.com/wp-content/uploads/2025/05/00_HOMEPAGE_Hero-Video_200525-1.mp4">Watch the Youwind overview.</a>
-  </video>
 </section>
 <script>
-  const heroVideo = document.querySelector('.home-hero-video');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const heroVideo = document.getElementById("hero-video");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (!reducedMotion.matches) {
     heroVideo.autoplay = true;
     heroVideo.play().catch(() => {});
   }
-  reducedMotion.addEventListener('change', (event) => {
+  reducedMotion.addEventListener("change", (event) => {
     if (event.matches) heroVideo.pause();
   });
 </script>
 <!-- Platform benefits -->
-<section class="home-features" aria-label="Why Youwind">
-  <div class="home-feature">
-    <img src="{{ '/assets/feature-expert.svg' | relative_url }}" alt="" width="65" height="65">
-    <h2>Expert-backed</h2>
-    <p>Wind Energy management developed by wind energy experts with over 15 years hands-on field experience—offering tailored guidance to ensure precision, practicality, and faster results.</p>
+<section aria-label="Why Youwind" class="container pb-12">
+  <div class="row g-7 text-center">
+    <div class="col-12 md:col-6 lg:col-3">
+      <img
+        alt=""
+        class="img-fluid rounded"
+        height="65"
+        src="{{ '/assets/feature-expert.svg' | relative_url }}"
+        width="65"
+      />
+      <h2 class="h3 fw-light fg-primary mt-5 mb-3">Expert-backed</h2>
+      <p>
+        Wind Energy management developed by wind energy experts with over 15
+        years hands-on field experience—offering tailored guidance to ensure
+        precision, practicality, and faster results.
+      </p>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <img
+        alt=""
+        class="img-fluid rounded"
+        height="65"
+        src="{{ '/assets/feature-integrated.svg' | relative_url }}"
+        width="65"
+      />
+      <h2 class="h3 fw-light fg-primary mt-5 mb-3">Integrated</h2>
+      <p>
+        All-in-one wind platform combining engineering, GIS and mapping,
+        financial modeling, and other integrations—streamlining workflows and
+        improving accuracy from day one.
+      </p>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <img
+        alt=""
+        class="img-fluid rounded"
+        height="65"
+        src="{{ '/assets/feature-seamless.svg' | relative_url }}"
+        width="65"
+      />
+      <h2 class="h3 fw-light fg-primary mt-5 mb-3">Seamless</h2>
+      <p>
+        Intuitive and structured steps that boost efficiency and
+        collaboration—breaking silos, providing transparency to complex
+        sensitivity analysis, and ensuring traceability across every project.
+      </p>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <img
+        alt=""
+        class="img-fluid rounded"
+        height="65"
+        src="{{ '/assets/feature-bankable.svg' | relative_url }}"
+        width="65"
+      />
+      <h2 class="h3 fw-light fg-primary mt-5 mb-3">Bankable</h2>
+      <p>
+        Validated and reliable yield and wake loss calculations that reduce
+        risk, control costs, and accelerate decision-making to ensure clarity on
+        long-term investments.
+      </p>
+    </div>
   </div>
-  <div class="home-feature">
-    <img src="{{ '/assets/feature-integrated.svg' | relative_url }}" alt="" width="65" height="65">
-    <h2>Integrated</h2>
-    <p>All-in-one wind platform combining engineering, GIS and mapping, financial modeling, and other integrations—streamlining workflows and improving accuracy from day one.</p>
-  </div>
-  <div class="home-feature">
-    <img src="{{ '/assets/feature-seamless.svg' | relative_url }}" alt="" width="65" height="65">
-    <h2>Seamless</h2>
-    <p>Intuitive and structured steps that boost efficiency and collaboration—breaking silos, providing transparency to complex sensitivity analysis, and ensuring traceability across every project.</p>
-  </div>
-  <div class="home-feature">
-    <img src="{{ '/assets/feature-bankable.svg' | relative_url }}" alt="" width="65" height="65">
-    <h2>Bankable</h2>
-    <p>Validated and reliable yield and wake loss calculations that reduce risk, control costs, and accelerate decision-making to ensure clarity on long-term investments.</p>
-  </div>
 </section>
-
-<div class="home-landing">
-<section class="layout-image-grid">
-<div class="landing-inner">
-<div class="image-row">
-<div class="image-col">
-<div class="img-wrapper">
-<img alt="Offshore wind farm development" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Onshore2.jpg"/>
-<a class="landing-link" href="{{ '/offshore.html' | relative_url }}">
-<h3 class="link-text">OFFSHORE</h3>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="white"></path>
-</svg>
-</span>
-</a>
-</div>
-</div>
-<div class="image-col">
-<div class="img-wrapper">
-<img alt="onshore wind farms" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/0b6d88f9ee931b1e2a22e769f04ee232aec0472d-scaled-e1747727362761.jpg"/>
-<a class="landing-link" href="{{ '/onshore.html' | relative_url }}">
-<h3 class="link-text">ONSHORE</h3>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="white"></path>
-</svg>
-</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="layout-blue-box position-left" style="background-image: url('https://youwindrenewables.com/wp-content/uploads/2025/05/home-expertise-section3.jpg');">
-<div class="landing-inner">
-<div class="blue-box-wrapper">
-<div class="blue-box">
-<h2>Proven expertise, trusted by the Wind industry</h2>
-<p>With a strong track record in offshore and strategic expansion into onshore, Youwind stands as a trusted partner across the wind energy sector.</p>
-<div class="box-logos">
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_Parkwind-white.svg"/>
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_COP-white.svg"/>
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_iberdrola-white.svg"/>
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_OWC.svg"/>
-</div>
-</div>
-<div class="side-content">
-<div class="item">
-<h3>Behind 20+ awarded offshore wind projects</h3>
-<p>A solid foundation of success, born from hands-on experience and technical precision.</p>
-</div>
-<div class="item">
-<h3>Top-tier o﻿nshore data partnerships</h3>
-<p>Alliances with leaders like Vortex ensure accurate insights and a deeper understanding of each project’s potential.</p>
-<div class="item-logos">
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_Vortex-white.svg"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="layout-text-image layout-grid">
-<div class="landing-inner">
-<div class="text-image-wrapper">
-<div class="left-content">
-<h2>All set in four steps</h2>
-<p>Kick off your journey with Youwind in just four clear steps. From the first demo to ongoing expert guidance, we make it easy to make the most of your platform and empower you to work quickly and effectively.</p>
-<a class="landing-link" href="{{ '/solutions.html' | relative_url }}">
-<span class="link-text">LEARN WHAT DEFINES OUR SOLUTIONS</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</a>
-</div>
-<div class="right-content">
-<div class="wrapper">
-<div class="grid-items">
-<div class="grid-item">
-<div class="grid-number">01</div>
-<h3>Demo request</h3>
-<p>Get a hands-on look at the platform and clarify any initial questions with our team.</p>
-</div>
-<div class="grid-item">
-<div class="grid-number">02</div>
-<h3>Technical setup and test</h3>
-<p>Configure and test your company account with the modules, data portability and integrations that match your project requirements.</p>
-</div>
-<div class="grid-item">
-<div class="grid-number">03</div>
-<h3>Partnership model</h3>
-<p>Choose the model that fits your needs—annual subscription as the standard, with flexible alternatives available with highest confidentiality protocols included.</p>
-</div>
-<div class="grid-item">
-<div class="grid-number">04</div>
-<h3>Ongoing support</h3>
-<p>Access the expert guidance you require, with onboarding and training, continuous follow-up with your doubts and our platform updates, all included in your subscription.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="layout-grid-text with-bg">
-<div class="landing-inner">
-<div class="grid-text-wrapper">
-<div class="grid-item left-content">
-<h2>A tailored approach for every client</h2>
-<p>Our robust and flexible high-performance platform is designed to meet the unique needs of each client and project context, and is paired with expert guidance to deliver the right solution every time.</p>
-<a class="landing-link" href="{{ '/clients.html' | relative_url }}">
-<span class="link-text">FIND THE RIGHT APPROACH FOR YOU</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</a>
-</div>
-<div class="grid-item">
-<div class="image">
-<img alt="Eolic park in the middle of the mountains" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/home-clients-section-developers.jpg"/>
-</div>
-<h3>Developers</h3>
-<p>Agile processes to enhance efficiency and increase in-house capabilities.</p>
-</div>
-<div class="grid-item">
-<div class="image">
-<img alt="Offshore wind farm optimisation turbines generating renewable energy in the middle of the sea under clear blue sky" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/c44838ca2ebf263f77b5c276c2efdf87845fe519-scaled.jpg"/>
-</div>
-<h3>Major developers</h3>
-<p>Scalable capabilities to optimise your projects and internal processes.</p>
-</div>
-<div class="grid-item">
-<div class="image">
-<img alt="Business professional giving a presentation to colleagues during a meeting in a bright office" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/tyler-casey-ficbiwfOPSo-unsplash-2.jpg"/>
-</div>
-<h3>Consultancies and Engineering Companies</h3>
-<p>Strengthen profitability of advisory reporting and expand scope of internal capabilities for more tenders applications.</p>
-</div>
-<div class="grid-item">
-<div class="image">
-<img alt="suppliers: Specialized transport truck carrying a wind turbine blade through a winding mountain road in foggy conditions" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/tyler-casey-ficbiwfOPSo-unsplash-1-2.jpg"/>
-</div>
-<h3>Suppliers</h3>
-<p>Strategic insights to refine value propositions.</p>
-</div>
-<div class="grid-item">
-<div class="image">
-<img alt="wind software development meeting" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/62121ed70b7eec3923945f5ac2ac7af751646759-scaled.jpg"/>
-</div>
-<h3>Governments and Institutions</h3>
-<p>Precise impact analysis for policy and planning.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="kc-related">
-<div class="landing-inner">
-<h2>Our Knowledge Center</h2>
-<p>Our Knowledge Center unites platform updates, expert-led webinars, technical insights, and practical applications—fostering collaboration and driving continuous progress across the wind energy sector.</p>
-<div class="kc-link-wrapper">
-<a class="kc-link" href="https://youwindrenewables.com/knowledge-center/">
-<span class="link-text">get inspired</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</a>
-</div>
-<div class="kc-related-grid">
-<article class="knowledge-item">
-<a href="https://youwindrenewables.com/knowledge-center/webinar-best-practices-for-offshore-wind-farm-design-in-south-korea/">
-<div class="kc-media">
-<div class="kc-media-wrapper">
-<img alt="" class="img-responsive attachment-large size-large wp-post-image" decoding="async" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1024x576.png" srcset="https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1024x576.png 1024w, https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-300x169.png 300w, https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-768x432.png 768w, https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1536x864.png 1536w, https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25.png 1920w"> </img></div>
-</div>
-<span class="kc-date">October 7, 2026</span>
-<div class="kc-tax-wrapper">
-<span class="kc-tax">Webinars | Market insights | Product Update | Offshore</span> </div>
-<h3>Webinar: Best practices for offshore wind farm design in South Korea</h3>
-<p>How do monsoons, typhoons, neighbouring wind farms and site constraints affect offshore wind farm performance in South Korea? </p>
-<div class="read-more-wrapper">
-<span class="kc-readmore">Read more</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</div>
-</a>
-</article>
-<article class="knowledge-item">
-<a href="https://youwindrenewables.com/knowledge-center/youwind-newsletter-october-26-edition/">
-<div class="kc-media">
-<div class="kc-media-wrapper">
-<img alt="" class="img-responsive attachment-large size-large wp-post-image" decoding="async" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1024x576.png" srcset="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1024x576.png 1024w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-300x169.png 300w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-768x432.png 768w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1536x864.png 1536w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30.png 1920w"> </img></div>
-</div>
-<span class="kc-date">September 30, 2026</span>
-<div class="kc-tax-wrapper">
-<span class="kc-tax">Articles &amp; PR | Market insights | Offshore | Onshore</span> </div>
-<h3>Youwind Newsletter October 26 Edition</h3>
-<p>Welcome to the October edition of the Youwind newsletter Each month, we’ll bring you the latest key developments in wind project design, product updates from our platform, company news, and a look at what our team has been working on. You’ll also find upcoming webinars,…</p>
-<div class="read-more-wrapper">
-<span class="kc-readmore">Read more</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</div>
-</a>
-</article>
-<article class="knowledge-item">
-<a href="https://youwindrenewables.com/knowledge-center/webinar-reduce-wind-resource-uncertainty-with-multiple-calibrations/">
-<div class="kc-media">
-<div class="kc-media-wrapper">
-<img alt="" class="img-responsive attachment-large size-large wp-post-image" decoding="async" loading="lazy" sizes="(max-width: 800px) 100vw, 800px" src="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1024x576.png" srcset="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1024x576.png 1024w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-300x169.png 300w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-768x432.png 768w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1536x864.png 1536w, https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29.png 1920w"> </img></div>
-</div>
-<span class="kc-date">September 30, 2026</span>
-<div class="kc-tax-wrapper">
-<span class="kc-tax">Webinars | Market insights | Product Update | Offshore</span> </div>
-<h3>Webinar: How Multiple Calibrations Reduce Wind Resource Uncertainty for Turbine Layout Design at your Site</h3>
-<p>Discover how wind resource calibration and integrated digital workflows are improving wind farm assessment and enabling more reliable, data-driven project decisions.</p>
-<div class="read-more-wrapper">
-<span class="kc-readmore">Read more</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</div>
-</a>
-</article>
-</div>
-</div>
-</section>
-
-<section aria-label="Our clients and partners" class="layout-logos with-bg">
-<div class="landing-inner">
-<div class="logo-grid">
-<div class="logo-item">
-<img alt="logo Acciona Energia" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_accionaenergia-darkblue.png"/>
-</div>
-<div class="logo-item">
-<img alt="logo Jera Nex bp" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_jeranexbp-darkblue.png"/>
-</div>
-<div class="logo-item">
-<img alt="logo de copenhagen offshore partners" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_COP-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de deme" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_DEME-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de saipem" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_saipem-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo Eneos" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_eneos-darkblue-scaled.png"/>
-</div>
-<div class="logo-item">
-<img alt="logo de parkwind" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_parkwind-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de iberdrola" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_iberdrola-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo Scottish Power" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/07/all-banner-logos_scottish-power-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de owc" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_OWC-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de naturgy" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_naturgy-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de esb" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_ESB-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de _Orkuveitar" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Orkuveitar-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de inpex" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Inpex-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="Dyna Energy" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo-Dyna-Energy.png"/>
-</div>
-<div class="logo-item">
-<img alt="GreenBreeze logo" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2026/02/GreenBreeze-logo.png"/>
-</div>
-<div class="logo-item">
-<img alt="Tokyo Electric Power Company" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo-Tepco.png"/>
-</div>
-<div class="logo-item">
-<img alt="Rox Energy Vietnam" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2026/03/Diseno-sin-titulo-27.png"/>
-</div>
-<div class="logo-item">
-<img alt="Logo Elbe1" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo_ElbeOne-Editada.png"/>
-</div>
-<div class="logo-item">
-<img alt="logo de copenhagen energy" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_CE-energy-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de _haskolin" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_haskolin-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de eselec" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_eselec-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de ecos group" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_ECOS-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de hdf energy" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_HDF-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de _bluenewables" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_bluenewables-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="Logo de Xwind" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_x1-wind-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/11/logo-environpact-web.png"/>
-</div>
-<div class="logo-item">
-<img alt="" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/11/Diseno-sin-titulo-5.png"/>
-</div>
-<div class="logo-item">
-<img alt="logo de vortex" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Vortex-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="Logo de upc" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_UPC-darkblue.svg"/>
-</div>
-<div class="logo-item">
-<img alt="logo de rannis" decoding="async" loading="lazy" src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_rannis-darkblue.svg"/>
-</div>
-</div>
-</div>
-</section>
-
-<section class="layout-text-image layout-faqs">
-<div class="landing-inner">
-<div class="text-image-wrapper">
-<div class="left-content">
-<h2>Frequently Asked Questions</h2>
-<a class="landing-link" href="https://youwindrenewables.com/faqs/">
-<span class="link-text">ALL FAQS</span>
-<span class="link-icon">
-<svg aria-hidden="true" fill="none" height="10" viewBox="0 0 12 10" width="12" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z" fill="#FA8354"></path>
-</svg>
-</span>
-</a>
-</div>
-<div class="right-content">
-<div class="wrapper">
-<div class="faq-items">
-<details class="faq-item">
-<summary class="faq-question">How does the onboarding process work?</summary>
-<div class="faq-answer">The onboarding procedure consists of dedicated onboarding sessions for a reduced group of users where we go through a real case that is chosen by the client, to go over all functionalities of the IT solution and discuss Q&amp;A while users are trying to do it by themselves.  </div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Can Youwind be used for onshore and offshore wind farms?</summary>
-<div class="faq-answer">Yes, Youwind supports both onshore and offshore wind farms. When you create a scenario of your wind farm you will be able to select if it is an onshore, offshore or a combination of both.</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Which wind resource can be included in Youwind? </summary>
-<div class="faq-answer">Youwind supports a broad range of wind data sources and formats. Youwind includes by default the Vortex Maps with ERA5, 20 years average with 1km resolution that has been mesoscaled. Optionally, the user will be able to upload wind resource grids and timeseries.</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Does Youwind participate in R&amp;D projects?</summary>
-<div class="faq-answer">Yes, <a href="{{ '/about.html' | relative_url }}">find out more about our R&amp;D projects</a>.</div>
-</details>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="layout-text-image layout-form">
-<div class="landing-inner">
-<div class="text-image-wrapper">
-<div class="left-content">
-<h2>Let the conversation flow</h2>
-<p>Got any questions? Send an inquiry and one of our team experts will be in touch as soon as possible.</p>
-</div>
-<div class="right-content">
-<div class="wrapper">
-<div class="form-wrapper"><p>Talk to our team about your project and discover how Youwind can help.</p><a class="btn-solid theme-primary" href="{{ '/request-demo.html' | relative_url }}">Request a demo</a></div>
-</div>
-</div>
-</div>
-</div>
-</section>
+<div>
+  <section class="py-12 px-3 md:px-7">
+    <div class="container">
+      <div class="row g-7 align-items-center">
+        <div class="col-12 md:col-6">
+          <div class="position-relative">
+            <img
+              alt="Offshore wind farm development"
+              class="w-100 rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Onshore2.jpg"
+            />
+            <a
+              class="btn-solid theme-primary position-absolute bottom-0 start-0 m-5"
+              href="{{ '/offshore.html' | relative_url }}"
+            >
+              <h3 class="fs-sm mb-0 d-inline">OFFSHORE</h3>
+              <span class="ms-2">
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="10"
+                  viewbox="0 0 12 10"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 md:col-6">
+          <div class="position-relative">
+            <img
+              alt="onshore wind farms"
+              class="w-100 rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/0b6d88f9ee931b1e2a22e769f04ee232aec0472d-scaled-e1747727362761.jpg"
+            />
+            <a
+              class="btn-solid theme-primary position-absolute bottom-0 start-0 m-5"
+              href="{{ '/onshore.html' | relative_url }}"
+            >
+              <h3 class="fs-sm mb-0 d-inline">ONSHORE</h3>
+              <span class="ms-2">
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="10"
+                  viewbox="0 0 12 10"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7 bg-primary fg-contrast-primary">
+    <div class="container">
+      <div class="row g-7 align-items-center">
+        <div class="col-12 md:col-6">
+          <h2 class="fw-light mb-5">
+            Proven expertise, trusted by the Wind industry
+          </h2>
+          <p>
+            With a strong track record in offshore and strategic expansion into
+            onshore, Youwind stands as a trusted partner across the wind energy
+            sector.
+          </p>
+          <div class="d-flex flex-wrap align-items-center gap-5 mt-7">
+            <img
+              alt=""
+              class="object-fit-contain"
+              decoding="async"
+              height="60"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_Parkwind-white.svg"
+              width="120"
+            />
+            <img
+              alt=""
+              class="object-fit-contain"
+              decoding="async"
+              height="60"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_COP-white.svg"
+              width="120"
+            />
+            <img
+              alt=""
+              class="object-fit-contain"
+              decoding="async"
+              height="60"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_iberdrola-white.svg"
+              width="120"
+            />
+            <img
+              alt=""
+              class="object-fit-contain"
+              decoding="async"
+              height="60"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_OWC.svg"
+              width="120"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-5 md:offset-1">
+          <div class="mb-7">
+            <h3 class="h4 fw-normal mb-3">
+              Behind 20+ awarded offshore wind projects
+            </h3>
+            <p>
+              A solid foundation of success, born from hands-on experience and
+              technical precision.
+            </p>
+          </div>
+          <div class="mb-7">
+            <h3 class="h4 fw-normal mb-3">
+              Top-tier o﻿nshore data partnerships
+            </h3>
+            <p>
+              Alliances with leaders like Vortex ensure accurate insights and a
+              deeper understanding of each project’s potential.
+            </p>
+            <div>
+              <img
+                alt=""
+                class="object-fit-contain"
+                decoding="async"
+                height="60"
+                loading="lazy"
+                src="https://youwindrenewables.com/wp-content/uploads/2025/05/Expertise-logos_Vortex-white.svg"
+                width="120"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7">
+    <div class="container">
+      <div class="row g-7 align-items-center">
+        <div class="col-12 lg:col-4">
+          <h2 class="fg-primary fw-light mb-5">All set in four steps</h2>
+          <p>
+            Kick off your journey with Youwind in just four clear steps. From
+            the first demo to ongoing expert guidance, we make it easy to make
+            the most of your platform and empower you to work quickly and
+            effectively.
+          </p>
+          <a
+            class="btn-outline theme-primary"
+            href="{{ '/solutions.html' | relative_url }}"
+          >
+            <span>LEARN WHAT DEFINES OUR SOLUTIONS</span>
+            <span class="ms-2">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="10"
+                viewbox="0 0 12 10"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                  fill="#FA8354"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="col-12 lg:col-8">
+          <div>
+            <div class="row g-7">
+              <div class="col-12 md:col-6">
+                <div class="fs-3xl fg-primary mb-3">01</div>
+                <h3 class="h4 fw-normal mb-3">Demo request</h3>
+                <p>
+                  Get a hands-on look at the platform and clarify any initial
+                  questions with our team.
+                </p>
+              </div>
+              <div class="col-12 md:col-6">
+                <div class="fs-3xl fg-primary mb-3">02</div>
+                <h3 class="h4 fw-normal mb-3">Technical setup and test</h3>
+                <p>
+                  Configure and test your company account with the modules, data
+                  portability and integrations that match your project
+                  requirements.
+                </p>
+              </div>
+              <div class="col-12 md:col-6">
+                <div class="fs-3xl fg-primary mb-3">03</div>
+                <h3 class="h4 fw-normal mb-3">Partnership model</h3>
+                <p>
+                  Choose the model that fits your needs—annual subscription as
+                  the standard, with flexible alternatives available with
+                  highest confidentiality protocols included.
+                </p>
+              </div>
+              <div class="col-12 md:col-6">
+                <div class="fs-3xl fg-primary mb-3">04</div>
+                <h3 class="h4 fw-normal mb-3">Ongoing support</h3>
+                <p>
+                  Access the expert guidance you require, with onboarding and
+                  training, continuous follow-up with your doubts and our
+                  platform updates, all included in your subscription.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7 bg-1">
+    <div class="container">
+      <div class="row g-7">
+        <div class="col-12 md:col-6 lg:col-4">
+          <h2 class="fg-primary fw-light mb-5">
+            A tailored approach for every client
+          </h2>
+          <p>
+            Our robust and flexible high-performance platform is designed to
+            meet the unique needs of each client and project context, and is
+            paired with expert guidance to deliver the right solution every
+            time.
+          </p>
+          <a
+            class="btn-outline theme-primary"
+            href="{{ '/clients.html' | relative_url }}"
+          >
+            <span>FIND THE RIGHT APPROACH FOR YOU</span>
+            <span class="ms-2">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="10"
+                viewbox="0 0 12 10"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                  fill="#FA8354"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="ratio ratio-16x9 mb-5">
+            <img
+              alt="Eolic park in the middle of the mountains"
+              class="w-100 h-100 object-fit-cover rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/home-clients-section-developers.jpg"
+            />
+          </div>
+          <h3 class="h4 fw-normal mb-3">Developers</h3>
+          <p>
+            Agile processes to enhance efficiency and increase in-house
+            capabilities.
+          </p>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="ratio ratio-16x9 mb-5">
+            <img
+              alt="Offshore wind farm optimisation turbines generating renewable energy in the middle of the sea under clear blue sky"
+              class="w-100 h-100 object-fit-cover rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/c44838ca2ebf263f77b5c276c2efdf87845fe519-scaled.jpg"
+            />
+          </div>
+          <h3 class="h4 fw-normal mb-3">Major developers</h3>
+          <p>
+            Scalable capabilities to optimise your projects and internal
+            processes.
+          </p>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="ratio ratio-16x9 mb-5">
+            <img
+              alt="Business professional giving a presentation to colleagues during a meeting in a bright office"
+              class="w-100 h-100 object-fit-cover rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/tyler-casey-ficbiwfOPSo-unsplash-2.jpg"
+            />
+          </div>
+          <h3 class="h4 fw-normal mb-3">
+            Consultancies and Engineering Companies
+          </h3>
+          <p>
+            Strengthen profitability of advisory reporting and expand scope of
+            internal capabilities for more tenders applications.
+          </p>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="ratio ratio-16x9 mb-5">
+            <img
+              alt="suppliers: Specialized transport truck carrying a wind turbine blade through a winding mountain road in foggy conditions"
+              class="w-100 h-100 object-fit-cover rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/tyler-casey-ficbiwfOPSo-unsplash-1-2.jpg"
+            />
+          </div>
+          <h3 class="h4 fw-normal mb-3">Suppliers</h3>
+          <p>Strategic insights to refine value propositions.</p>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="ratio ratio-16x9 mb-5">
+            <img
+              alt="wind software development meeting"
+              class="w-100 h-100 object-fit-cover rounded"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/62121ed70b7eec3923945f5ac2ac7af751646759-scaled.jpg"
+            />
+          </div>
+          <h3 class="h4 fw-normal mb-3">Governments and Institutions</h3>
+          <p>Precise impact analysis for policy and planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7">
+    <div class="container">
+      <h2 class="fg-primary fw-light mb-5">Our Knowledge Center</h2>
+      <p>
+        Our Knowledge Center unites platform updates, expert-led webinars,
+        technical insights, and practical applications—fostering collaboration
+        and driving continuous progress across the wind energy sector.
+      </p>
+      <div class="mb-7">
+        <a
+          class="btn-outline theme-primary"
+          href="https://youwindrenewables.com/knowledge-center/"
+        >
+          <span>get inspired</span>
+          <span class="ms-2">
+            <svg
+              aria-hidden="true"
+              fill="none"
+              height="10"
+              viewbox="0 0 12 10"
+              width="12"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                fill="#FA8354"
+              ></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="row g-7">
+        <article class="col-12 md:col-6 lg:col-4">
+          <a
+            class="d-block fg-body text-decoration-none"
+            href="https://youwindrenewables.com/knowledge-center/webinar-best-practices-for-offshore-wind-farm-design-in-south-korea/"
+          >
+            <div>
+              <div class="ratio ratio-16x9 mb-5">
+                <img
+                  alt=""
+                  class="w-100 h-100 object-fit-cover rounded"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  src="https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1024x576.png"
+                  srcset="
+                    https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1024x576.png 1024w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-300x169.png   300w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-768x432.png   768w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25-1536x864.png 1536w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/10/Fondo_videos-25.png          1920w
+                  "
+                />
+              </div>
+            </div>
+            <span class="d-block small mb-3">October 7, 2026</span>
+            <div>
+              <span class="small"
+                >Webinars | Market insights | Product Update | Offshore</span
+              >
+            </div>
+            <h3 class="h4 fg-primary my-5">
+              Webinar: Best practices for offshore wind farm design in South
+              Korea
+            </h3>
+            <p>
+              How do monsoons, typhoons, neighbouring wind farms and site
+              constraints affect offshore wind farm performance in South Korea? 
+            </p>
+            <div class="fg-primary fw-semibold text-decoration-underline">
+              <span>Read more</span>
+              <span class="ms-2">
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="10"
+                  viewbox="0 0 12 10"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                    fill="#FA8354"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        <article class="col-12 md:col-6 lg:col-4">
+          <a
+            class="d-block fg-body text-decoration-none"
+            href="https://youwindrenewables.com/knowledge-center/youwind-newsletter-october-26-edition/"
+          >
+            <div>
+              <div class="ratio ratio-16x9 mb-5">
+                <img
+                  alt=""
+                  class="w-100 h-100 object-fit-cover rounded"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  src="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1024x576.png"
+                  srcset="
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1024x576.png 1024w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-300x169.png   300w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-768x432.png   768w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30-1536x864.png 1536w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-30.png          1920w
+                  "
+                />
+              </div>
+            </div>
+            <span class="d-block small mb-3">September 30, 2026</span>
+            <div>
+              <span class="small"
+                >Articles &amp; PR | Market insights | Offshore | Onshore</span
+              >
+            </div>
+            <h3 class="h4 fg-primary my-5">
+              Youwind Newsletter October 26 Edition
+            </h3>
+            <p>
+              Welcome to the October edition of the Youwind newsletter Each
+              month, we’ll bring you the latest key developments in wind project
+              design, product updates from our platform, company news, and a
+              look at what our team has been working on. You’ll also find
+              upcoming webinars,…
+            </p>
+            <div class="fg-primary fw-semibold text-decoration-underline">
+              <span>Read more</span>
+              <span class="ms-2">
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="10"
+                  viewbox="0 0 12 10"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                    fill="#FA8354"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        <article class="col-12 md:col-6 lg:col-4">
+          <a
+            class="d-block fg-body text-decoration-none"
+            href="https://youwindrenewables.com/knowledge-center/webinar-reduce-wind-resource-uncertainty-with-multiple-calibrations/"
+          >
+            <div>
+              <div class="ratio ratio-16x9 mb-5">
+                <img
+                  alt=""
+                  class="w-100 h-100 object-fit-cover rounded"
+                  decoding="async"
+                  loading="lazy"
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  src="https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1024x576.png"
+                  srcset="
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1024x576.png 1024w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-300x169.png   300w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-768x432.png   768w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29-1536x864.png 1536w,
+                    https://youwindrenewables.com/wp-content/uploads/2026/09/Fondo_videos-29.png          1920w
+                  "
+                />
+              </div>
+            </div>
+            <span class="d-block small mb-3">September 30, 2026</span>
+            <div>
+              <span class="small"
+                >Webinars | Market insights | Product Update | Offshore</span
+              >
+            </div>
+            <h3 class="h4 fg-primary my-5">
+              Webinar: How Multiple Calibrations Reduce Wind Resource
+              Uncertainty for Turbine Layout Design at your Site
+            </h3>
+            <p>
+              Discover how wind resource calibration and integrated digital
+              workflows are improving wind farm assessment and enabling more
+              reliable, data-driven project decisions.
+            </p>
+            <div class="fg-primary fw-semibold text-decoration-underline">
+              <span>Read more</span>
+              <span class="ms-2">
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="10"
+                  viewbox="0 0 12 10"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                    fill="#FA8354"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section
+    aria-label="Our clients and partners"
+    class="py-12 px-3 md:px-7 bg-1"
+  >
+    <div class="container">
+      <div class="row g-7 align-items-center justify-content-center">
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo Acciona Energia"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_accionaenergia-darkblue.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo Jera Nex bp"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_jeranexbp-darkblue.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de copenhagen offshore partners"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_COP-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de deme"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_DEME-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de saipem"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_saipem-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo Eneos"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/09/all-banner-logos_eneos-darkblue-scaled.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de parkwind"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_parkwind-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de iberdrola"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_iberdrola-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo Scottish Power"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/07/all-banner-logos_scottish-power-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de owc"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_OWC-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de naturgy"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_naturgy-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de esb"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_ESB-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de _Orkuveitar"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Orkuveitar-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de inpex"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Inpex-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Dyna Energy"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo-Dyna-Energy.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="GreenBreeze logo"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2026/02/GreenBreeze-logo.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Tokyo Electric Power Company"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo-Tepco.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Rox Energy Vietnam"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2026/03/Diseno-sin-titulo-27.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Logo Elbe1"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2026/02/Logo_ElbeOne-Editada.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de copenhagen energy"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_CE-energy-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de _haskolin"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_haskolin-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de eselec"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_eselec-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de ecos group"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_ECOS-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de hdf energy"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_HDF-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de _bluenewables"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_bluenewables-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Logo de Xwind"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_x1-wind-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt=""
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/11/logo-environpact-web.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt=""
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/11/Diseno-sin-titulo-5.png"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de vortex"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_Vortex-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="Logo de upc"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_UPC-darkblue.svg"
+            />
+          </div>
+        </div>
+        <div class="col-6 md:col-3 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              alt="logo de rannis"
+              class="w-100 h-100 object-fit-contain"
+              decoding="async"
+              loading="lazy"
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/all-banner-logos-70-_rannis-darkblue.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7">
+    <div class="container">
+      <div class="row g-7 align-items-center">
+        <div class="col-12 lg:col-4">
+          <h2 class="fg-primary fw-light mb-5">Frequently Asked Questions</h2>
+          <a
+            class="btn-outline theme-primary"
+            href="https://youwindrenewables.com/faqs/"
+          >
+            <span>ALL FAQS</span>
+            <span class="ms-2">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="10"
+                viewbox="0 0 12 10"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.60156 9.72656L5.64844 8.60938L8.39062 5.82812L7.35156 5.92969H0.390625V4.30469H7.35156L8.39062 4.40625L5.64844 1.625L6.60156 0.507812L11.2266 5.11719L6.60156 9.72656Z"
+                  fill="#FA8354"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="col-12 lg:col-8">
+          <div>
+            <div class="accordion">
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  How does the onboarding process work?
+                </summary>
+                <div class="accordion-body">
+                  The onboarding procedure consists of dedicated onboarding
+                  sessions for a reduced group of users where we go through a
+                  real case that is chosen by the client, to go over all
+                  functionalities of the IT solution and discuss Q&amp;A while
+                  users are trying to do it by themselves.
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  Can Youwind be used for onshore and offshore wind farms?
+                </summary>
+                <div class="accordion-body">
+                  Yes, Youwind supports both onshore and offshore wind farms.
+                  When you create a scenario of your wind farm you will be able
+                  to select if it is an onshore, offshore or a combination of
+                  both.
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  Which wind resource can be included in Youwind?
+                </summary>
+                <div class="accordion-body">
+                  Youwind supports a broad range of wind data sources and
+                  formats. Youwind includes by default the Vortex Maps with
+                  ERA5, 20 years average with 1km resolution that has been
+                  mesoscaled. Optionally, the user will be able to upload wind
+                  resource grids and timeseries.
+                </div>
+              </details>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  Does Youwind participate in R&amp;D projects?
+                </summary>
+                <div class="accordion-body">
+                  Yes,
+                  <a href="{{ '/about.html' | relative_url }}"
+                    >find out more about our R&amp;D projects</a
+                  >.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 px-3 md:px-7">
+    <div class="container">
+      <div class="row g-7 align-items-center">
+        <div class="col-12 lg:col-4">
+          <h2 class="fg-primary fw-light mb-5">Let the conversation flow</h2>
+          <p>
+            Got any questions? Send an inquiry and one of our team experts will
+            be in touch as soon as possible.
+          </p>
+        </div>
+        <div class="col-12 lg:col-8">
+          <div>
+            <div class="p-7 bg-1 rounded">
+              <p>
+                Talk to our team about your project and discover how Youwind can
+                help.
+              </p>
+              <a
+                class="btn-solid theme-primary"
+                href="{{ '/request-demo.html' | relative_url }}"
+                >Request a demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
