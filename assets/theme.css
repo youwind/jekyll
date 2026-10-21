@@ -1,0 +1,17 @@
+:root {
+  /* Edit these shared design tokens to customize the site. */
+  --bs-primary-base: #033f7f;
+  --bs-spacer: 1rem;
+
+  /* Derive all primary roles from the brand color, in both color modes. */
+  --bs-primary-bg: var(--bs-primary-base);
+  --bs-primary-fg: light-dark(color-mix(in oklch, var(--bs-primary-base) 80%, black), color-mix(in oklch, var(--bs-primary-base) 65%, white));
+  --bs-primary-fg-emphasis: light-dark(color-mix(in oklch, var(--bs-primary-base) 55%, black), color-mix(in oklch, var(--bs-primary-base) 35%, white));
+  --bs-primary-bg-subtle: light-dark(color-mix(in oklch, var(--bs-primary-base) 10%, white), color-mix(in oklch, var(--bs-primary-base) 25%, black));
+  --bs-primary-bg-muted: light-dark(color-mix(in oklch, var(--bs-primary-base) 20%, white), color-mix(in oklch, var(--bs-primary-base) 40%, black));
+  --bs-primary-border: light-dark(color-mix(in oklch, var(--bs-primary-base) 35%, white), color-mix(in oklch, var(--bs-primary-base) 80%, black));
+  --bs-primary-focus-ring: light-dark(color-mix(in oklch, var(--bs-primary-base) 50%, var(--bs-bg-body)), color-mix(in oklch, var(--bs-primary-base) 75%, var(--bs-bg-body)));
+
+  /* Check contrast if changing the brand color; pale colors may need black. */
+  --bs-primary-contrast: var(--bs-white);
+}

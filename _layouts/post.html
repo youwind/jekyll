@@ -3,9 +3,9 @@ layout: default
 ---
 <article class="row" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="col-md-8 mx-auto my-4">
+  <header class="md:col-8 mx-auto my-7">
     <h1 class="" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="text-right">
+    <p class="text-end">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
@@ -15,7 +15,7 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  <div class="col-md-8 mx-auto" itemprop="articleBody">
+  <div class="md:col-8 mx-auto" itemprop="articleBody">
     {{ content }}
   </div>
 
