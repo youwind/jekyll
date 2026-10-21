@@ -24,7 +24,7 @@
           <a href="https://youwindrenewables.com/knowledge-center/" class="nav-link text-uppercase text-nowrap">Knowledge Center</a>
         </li>
         <li class="nav-item">
-          <a href="{{ '/about.html' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url contains '/about' %} active fw-semibold{% endif %}"{% if page.url contains '/about' %} aria-current="page"{% endif %}>About us</a>
+          <a href="{{ '/about' | relative_url }}" class="nav-link text-uppercase text-nowrap{% if page.url == '/about' %} active fw-semibold{% endif %}"{% if page.url == '/about' %} aria-current="page"{% endif %}>About us</a>
         </li>
       </ul>
     </div>
