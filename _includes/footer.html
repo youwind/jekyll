@@ -1,50 +1,235 @@
-<footer class="container-fluid py-7">
-  <data class="" href="{{ "/" | relative_url }}"></data>
-
-  <div class="row ps-7">
-    <div class="col-12 md:col-2 mt-5">
-      <img src="{{ '/assets/logo.svg' | relative_url }}" alt="Youwind Renewables" class="img-fluid bg-primary rounded p-3" width="209"/>
-    </div>
-    <div class="col-12 md:col-2 mt-5">
-      <div class="small fw-bold pt-3">Reykjavík</div>
-      <div class="small fw-bold pt-3">London</div>
-      <div class="small fw-bold pt-3">Barcelona</div>
-      <div class="small fw-normal">
-        C/de Nicaragua 137,<br>
-        Entresuelo 3, 08029 <br>
-        Barcelona, Spain <br><br>
-        contact@<br>
-        youwindrenewables.com
+<footer>
+  <div class="bg-primary fg-contrast-primary py-12">
+    <div class="container">
+      <div class="row g-7">
+        <div class="col-12 md:col-6 lg:col-2">
+          <a href="{{ '/' | relative_url }}" aria-label="Youwind homepage">
+            <img
+              src="{{ '/assets/logo.svg' | relative_url }}"
+              alt="Youwind Renewables"
+              class="img-fluid"
+              width="180"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <nav class="col-12 md:col-6 lg:col-3" aria-labelledby="footer-youwind">
+          <h2 class="fs-sm fw-semibold text-uppercase mb-5" id="footer-youwind">
+            All about Youwind
+          </h2>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="{{ '/solutions' | relative_url }}"
+                >Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="{{ '/offshore' | relative_url }}"
+                >Offshore</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="{{ '/onshore' | relative_url }}"
+                >Onshore</a
+              >
+            </li>
+            <li>
+              <a class="fg-contrast-primary" href="{{ '/bess' | relative_url }}"
+                >BESS</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="{{ '/clients' | relative_url }}"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="https://youwindrenewables.com/knowledge-center/"
+                >Knowledge Center</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="{{ '/about' | relative_url }}"
+                >About us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="col-12 md:col-6 lg:col-2"
+          aria-labelledby="footer-knowledge"
+        >
+          <h2
+            class="fs-sm fw-semibold text-uppercase mb-5"
+            id="footer-knowledge"
+          >
+            Knowledge Center
+          </h2>
+          <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="https://youwindrenewables.com/knowledge-center/?_format=article"
+                >Articles</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="https://youwindrenewables.com/knowledge-center/?_format=webinar"
+                >Webinars</a
+              >
+            </li>
+            <li>
+              <a
+                class="fg-contrast-primary"
+                href="https://youwindrenewables.com/knowledge-center/?_format=scientific-papers"
+                >Scientific papers</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="col-12 md:col-6 lg:col-2">
+          <nav aria-labelledby="footer-reach-us">
+            <h2
+              class="fs-sm fw-semibold text-uppercase mb-5"
+              id="footer-reach-us"
+            >
+              Reach us
+            </h2>
+            <ul class="list-unstyled d-flex flex-column gap-3">
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="{{ '/contact' | relative_url }}#get-in-touch"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://youwindrenewables.com/faqs/"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://www.linkedin.com/company/youwindrenewables/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <nav class="mt-7" aria-label="Legal">
+            <ul class="list-unstyled d-flex flex-column gap-3 small mb-0">
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://youwindrenewables.com/terms-and-conditions/"
+                  >Terms and Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://youwindrenewables.com/privacy-policy-2/"
+                  rel="privacy-policy"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://youwindrenewables.com/cookies-policy/"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fg-contrast-primary"
+                  href="https://youwindrenewables.com/legal-disclaimer/"
+                  >Legal Disclaimer</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 lg:col-3">
+          <h2 class="fs-sm fw-semibold text-uppercase mb-5">
+            Stay in the loop
+          </h2>
+          {% include hubspot-form.html type='newsletter' id='footer-newsletter-form' %}
+          <div class="d-flex flex-wrap gap-3 mt-7">
+            <a
+              class="btn-solid theme-secondary"
+              href="{{ '/request-demo' | relative_url }}"
+              >Request Demo</a
+            >
+            <a
+              class="btn-solid theme-secondary"
+              href="https://app.youwindrenewables.com/"
+              >Log in</a
+            >
+          </div>
+        </div>
       </div>
+      <p class="small mt-12 mb-0">
+        All copyrights reserved © Youwind Renewables
+      </p>
     </div>
-    <div class="col-6 md:col-1 md:offset-1 mt-5">
-      <div class="small fw-semibold">IT Solutions</div>
-    </div>
-    <div class="col-6 md:col-1 mt-5">
-      <div class="small fw-semibold">Other Services</div>
-      <a href="" class="small fw-normal fg-body d-block">Consultancy</a>
-      <a href="" class="small fw-normal fg-body d-block">Workshops</a>
-    </div>
-    <div class="col-6 md:col-1 mt-5">
-      <div class="small fw-semibold">About us</div>
-      <a href="" class="small fw-normal fg-body d-block">Mission</a>
-      <a href="" class="small fw-normal fg-body d-block">Team</a>
-      <a href="" class="small fw-normal fg-body d-block">Security</a>
-      <a href="" class="small fw-normal fg-body d-block">Careers</a>
-    </div>
-    <div class="col-6 md:col-1 mt-5">
-      <div class="small fw-semibold">Resources</div>
-      <a href="faq" class="small fw-normal fg-body d-block">FAQs</a>
-      <a href="https://blog.youwindrenewables.com/" class="small fw-normal fg-body d-block">Blog</a>
-      <a href="" class="small fw-normal fg-body d-block">Customer cases</a>
-      <a href="" class="small fw-normal fg-body d-block">Validation Reports</a>
-      <a href="" class="small fw-normal fg-body d-block">Terms & Conditions</a>
-      <a href="" class="small fw-normal fg-body d-block">Cookie Policy</a>
-    </div>
-    <div class="col-12 md:col-3 text-center mt-5">
-      <a href="{{ '/request-demo.html' | relative_url }}" class="btn-solid theme-primary mt-3">Request Demo</a>
-      <br>
-      <a href="https://app.youwindrenewables.com/" class="btn-solid theme-primary mt-3">Log in</a>
+  </div>
+  <div class="bg-white py-7" data-bs-theme="light">
+    <div class="container">
+      <p class="text-center fg-body mb-7" lang="es">
+        Financiado por la Unión Europea – NextGenerationEU
+      </p>
+      <div class="row g-7 align-items-center justify-content-center">
+        <div class="col-12 md:col-4 lg:col-3">
+          <div class="ratio ratio-16x9">
+            <img
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/Logotipo_del_Plan_de_Recuperacion_Transformacion_y_Resiliencia.svg-1.svg"
+              alt="Plan de Recuperación, Transformación y Resiliencia"
+              class="w-100 h-100 object-fit-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-4 lg:col-3">
+          <div class="ratio ratio-16x9">
+            <img
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/ES-Financiado-por-la-Union-Europea_POS_web-1024x301-1.svg"
+              alt="Funded by the European Union – NextGenerationEU"
+              class="w-100 h-100 object-fit-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-4 lg:col-2">
+          <div class="ratio ratio-16x9">
+            <img
+              src="https://youwindrenewables.com/wp-content/uploads/2025/05/pyme_innovadora_meic-EN_web-copy-1.svg"
+              alt="Innovative SME recognition"
+              class="w-100 h-100 object-fit-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /request-demo
 title: Request a Demo
 description: Discover how Youwind can support your wind farm development with a personalized demo.
 ---
@@ -7,9 +8,17 @@ description: Discover how Youwind can support your wind farm development with a 
 <section class="row justify-content-center py-12">
   <div class="col-12 md:col-8 lg:col-6 p-5">
     <h1>Request a demo</h1>
-    <p class="fs-xl mt-5">See how Youwind can support your wind farm development.</p>
-    <p>Get in touch to arrange a personalized walkthrough of our platform. Tell us about your company, your project, and what you’d like to explore.</p>
-    <a class="btn-solid theme-primary mt-3" href="mailto:{{ site.email }}?subject=Youwind%20demo%20request">Email us to request a demo</a>
-    <p class="mt-5">Prefer to contact us directly? <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p class="fs-xl mt-5">
+      See how Youwind can support your wind farm development.
+    </p>
+    <p>
+      Get in touch to arrange a personalized walkthrough of our platform. Tell
+      us about your company, your project, and what you’d like to explore.
+    </p>
+    {% include hubspot-form.html type='demo' id='request-demo-form' %}
+    <p class="mt-5">
+      Prefer to contact us directly?
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
   </div>
 </section>

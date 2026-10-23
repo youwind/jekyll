@@ -1136,15 +1136,7 @@ layout: default
         <div class="col-12 lg:col-8">
           <div>
             <div class="p-7 bg-1 rounded">
-              <p>
-                Talk to our team about your project and discover how Youwind can
-                help.
-              </p>
-              <a
-                class="btn-solid theme-primary"
-                href="{{ '/request-demo.html' | relative_url }}"
-                >Request a demo</a
-              >
+              {% include hubspot-form.html type='contact' id='page-contact-form' %}
             </div>
           </div>
         </div>

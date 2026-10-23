@@ -1,0 +1,19 @@
+{% case include.type %}
+  {% when 'demo' %}
+    {% assign form_id = '51999c6c-bbb7-4a2e-a1bb-0ce3670a04a1' %}
+    {% assign form_anchor = 'request-a-demo' %}
+  {% when 'newsletter' %}
+    {% assign form_id = 'bdc11fc0-1636-49e4-9175-1efd2ee469bb' %}
+    {% assign form_anchor = 'stay-in-the-loop' %}
+  {% else %}
+    {% assign form_id = 'df733937-1cee-4f60-947f-b4f224374ded' %}
+    {% assign form_anchor = 'get-in-touch' %}
+{% endcase %}
+<div class="bg-white fg-body p-5 rounded" data-bs-theme="light">
+  <div id="{{ include.id }}" data-hubspot-form="{{ form_id }}"></div>
+  <p class="small mt-3 mb-0">
+    Form not loading?
+    <a href="https://youwindrenewables.com/contact/#{{ form_anchor }}">Open it on our live site</a>
+    or <a href="mailto:{{ site.email }}">email us</a>.
+  </p>
+</div>

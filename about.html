@@ -1663,15 +1663,7 @@ description: Meet the people, experience, and values behind Youwind’s wind ene
         <div class="col-12 md:col-6">
           <div>
             <div class="bg-1 p-7 rounded">
-              <p>
-                Talk to our team about your project and discover how Youwind can
-                help.
-              </p>
-              <a
-                class="btn-solid theme-primary"
-                href="{{ '/request-demo.html' | relative_url }}"
-                >Request a demo</a
-              >
+              {% include hubspot-form.html type='contact' id='page-contact-form' %}
             </div>
           </div>
         </div>
